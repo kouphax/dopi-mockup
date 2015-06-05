@@ -1,0 +1,70 @@
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.week {
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-right: 0;
+  margin-top: 3rem;
+}
+
+.day {
+  border-right: 1px solid #000;
+  float:left;
+  width:14.28%;
+  position:relative;
+
+  .date {
+    position:absolute;
+    left:10px;
+    font-size: 2rem;
+    color: #999;
+  }
+
+  &.failed {
+    background-color: #ff8a80;
+    color: #d50000;
+
+  }
+
+  .actions {
+    background-color: #fff;
+    border-top: 1px solid #000;
+    text-align: center;
+
+    &.hidden {
+
+      a {
+        visibility: hidden;
+      }
+    }
+
+    a {
+      margin: 0.5rem;
+    }
+  }
+
+  &.complete {
+    background-color: #b9f6ca;
+    color: #00c853;
+  }
+
+  .digit {
+    text-align: center;
+    font-size: 8rem;
+    font-weight:bold;
+  }
+}

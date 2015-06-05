@@ -1,0 +1,2 @@
+{:require  [dopi.app]
+ :init-fns [dopi.app/init]}
